@@ -6,7 +6,16 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path:'/',
+    redirect:'/visualizedScreen'
+  },
+  {
+    path: '/visualizedScreen',
+    name: 'visualizedScreen',
+    component: ()=> import('@/views/visualizedScreen')
+  },
+  {
+    path: '/home',
     name: 'home',
     component: HomeView
   },
